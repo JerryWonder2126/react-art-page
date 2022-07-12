@@ -1,0 +1,65 @@
+.ServiceCard, .ServiceItem {
+    box-shadow: 2px 2px 4px var(--bs-dark);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    background-color: transparent;
+}
+
+.ServiceItem > div {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 3rem;
+}
+
+.ServiceCard::before, .ServiceItem::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.548);
+    transition: all 5ms;
+}
+
+.ServiceCard > div {
+    display: grid;
+    place-content: center;
+}
+
+.ReviewCard {
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    padding: 3rem;
+    text-align: center;
+    color: var(--bs-dark);
+    width: 80vw;
+    margin: 0 auto;
+    max-width: 768px;
+    border-radius: 2rem !important;
+}
+
+.ReviewCard img {
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+.WeDoDiv > ul {
+    /* list-style-image: url(../../assets/icons/twitter.png); */
+    list-style-type: circle;
+}
+
+@media (max-device-width: 468px) {
+    .ReviewCard {
+        width: 100%;
+    }
+}
+
+@media (min-device-width: 768px) {
+    .WeDoDiv > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

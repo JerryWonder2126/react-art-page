@@ -1,0 +1,23 @@
+.MainDiv {
+    min-height: var(--gen-height);
+    margin-bottom: 2rem;
+}
+
+.OfferImage {
+    /* border-radius: 20px !important; */
+    box-sizing: border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    background-color: transparent;
+}
+
+.NavTab :global(.nav-link) {
+    cursor: pointer;
+}
+
+.NavTab :global(.nav-link.active) {
+    cursor: text;
+}

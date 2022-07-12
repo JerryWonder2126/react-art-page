@@ -1,0 +1,22 @@
+.SectionContainer {
+    background-color: black;
+    background-image: url(../../assets/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.MainDiv {
+    min-height: var(--gen-height);
+}
+
+.SectionContainerCol {
+    padding: 5rem;
+    background-color: var(--transparent-dark);
+    color: var(--bs-light);
+    background-blend-mode: soft-light;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    box-shadow: inset 4px 4px 5px 0px var(--transparent-dark);
+    text-align: center;
+}

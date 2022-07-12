@@ -1,0 +1,12 @@
+
+
+@media (max-device-width: 575px) {
+    .DropDown > div {
+        background-color: var(--bg-dark);
+        
+    }
+    
+    .DropDown > div > a {
+        color: rgba(255, 255, 255, 0.55);
+    }
+}

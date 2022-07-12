@@ -1,0 +1,13 @@
+/* .SocialIconsDiv {
+    text-align: center;
+} */
+
+.Footer {
+    box-sizing: border-box;
+}
+
+.SocialIconsDiv > a > img {
+    width: 2rem;
+    aspect-ratio: 1;
+    margin: 0.5rem;
+}

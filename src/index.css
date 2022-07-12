@@ -1,0 +1,10 @@
+:root {
+
+    --gen-height: calc(100vh - 18.5rem);
+    --transparent-dark: #212529db;
+    
+}
+
+.SectionContainer {
+    min-height: 100vh;
+}

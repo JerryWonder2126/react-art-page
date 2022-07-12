@@ -1,0 +1,5 @@
+.MainDiv {
+    min-height: var(--gen-height);
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
