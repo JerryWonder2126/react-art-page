@@ -3,7 +3,10 @@ import Home from '../components/Home/Home';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Offers from '../components/Offers/Offers';
-import img from '../assets/contact.jpg'
+import aboutImg from '../assets/about.jpg'
+import contactImg from '../assets/contact.jpg'
+import longImg from '../assets/long.jpg'
+import boxImg from '../assets/sample-box.png'
 import OrderOffer from '../components/OrderOffer/OrderOffer';
 
 const MainContext = createContext();
@@ -16,22 +19,22 @@ export const AppContextProvider = (props) => {
     {
       id: 0,
       title: 'title2',
-      imgurl: '/assets/about.jpg',
+      imgurl: boxImg,
     },
     {
       id: 1,
       title: 'title1',
-      imgurl: '/assets/long.jpg',
+      imgurl: longImg,
     },
     {
       id: 2,
       title: 'title3',
-      imgurl: '/assets/contact.jpg',
+      imgurl: contactImg,
     },
     {
       id: 3,
       title: 'title4',
-      imgurl: '/assets/about.jpg',
+      imgurl: aboutImg,
     }
   ]
 

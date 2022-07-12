@@ -4,13 +4,18 @@ import OfferCard from '../OfferCard/OfferCard'
 import LatestOffers from '../LatestOffers/LatestOffers'
 import styles from './Offers.module.css'
 
+import aboutImg from '../../assets/about.jpg'
+import contactImg from '../../assets/contact.jpg'
+import longImg from '../../assets/long.jpg'
+import boxImg from '../../assets/sample-box.png'
+
 const Offers = (props) => {
   let offers = useMemo(() => [
         {
             title: props.title,
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/about.jpg', '/assets/long.jpg', '/assets/contact.jpg', '/assets/sample-box.png'],
+            imgurl: [aboutImg, longImg, contactImg, boxImg],
             price: 90,
             uhash: 1,
             section_hash: 'string',
@@ -25,7 +30,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/contact.jpg'],
+            imgurl: [contactImg],
             price: 90,
             uhash: 2,
             section_hash: 'string',
@@ -40,7 +45,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/long.jpg'],
+            imgurl: [longImg],
             price: 90,
             uhash: 3,
             section_hash: 'string',
@@ -55,7 +60,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/about.jpg'],
+            imgurl: [aboutImg],
             price: 90,
             uhash: 4,
             section_hash: 'string',
@@ -72,7 +77,7 @@ const Offers = (props) => {
         title: props.title,
         short_description: 'short description',
         long_description: 'long description',
-        imgurl: ['/assets/long.jpg'],
+        imgurl: [longImg],
         price: 90,
         uhash: 10,
         section_hash: 'string',

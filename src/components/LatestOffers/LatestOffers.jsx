@@ -1,14 +1,17 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import OfferCard from '../OfferCard/OfferCard'
+import aboutImg from '../../assets/about.jpg'
+import contactImg from '../../assets/contact.jpg'
+import longImg from '../../assets/long.jpg'
 
-const Offers = (props) => {
+const LatestOffers = (props) => {
   let offers = [
         {
             title: props.title,
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/about.jpg'],
+            imgurl: [aboutImg],
             price: 90,
             uhash: 1,
             section_hash: 'string',
@@ -23,7 +26,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/contact.jpg'],
+            imgurl: [contactImg],
             price: 90,
             uhash: 2,
             section_hash: 'string',
@@ -38,7 +41,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/long.jpg'],
+            imgurl: [longImg],
             price: 90,
             uhash: 3,
             section_hash: 'string',
@@ -53,7 +56,7 @@ const Offers = (props) => {
             title: 'title',
             short_description: 'short description',
             long_description: 'long description',
-            imgurl: ['/assets/about.jpg'],
+            imgurl: [aboutImg],
             price: 90,
             uhash: 4,
             section_hash: 'string',
@@ -86,4 +89,4 @@ const Offers = (props) => {
   )
 }
 
-export default Offers
+export default LatestOffers
