@@ -1,70 +1,61 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import Home from '../components/Home/Home';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Offers from '../components/Offers/Offers';
-import aboutImg from '../assets/about.jpg'
-import contactImg from '../assets/contact.jpg'
-import longImg from '../assets/long.jpg'
-import boxImg from '../assets/sample-box.png'
 import OrderOffer from '../components/OrderOffer/OrderOffer';
+import DashboardMain from '../components/Dashboard/DashboardMain';
 
 const MainContext = createContext();
 
 const UpdateMainContext = createContext();
 
+const viewReducer = (state, action) => {
+  let newView = <Home />;
+  if (action.view === 'about') {
+    newView = <About />
+  } else if (action.view === 'contact') {
+    newView = <Contact />
+  } else if (action.view === 'dashboard') {
+    newView = <DashboardMain />
+  } else if (action.view === 'offer') {
+    newView = <Offers title={action.title} />
+  } else if (action.view === 'order') {
+    newView = <OrderOffer offer={action.offer} />
+  }
+  
+  localStorage.setItem('view', JSON.stringify(action))
+
+  return newView;
+}
+
+const previousView = () => {
+  const view = localStorage.getItem('view')
+  const action = view ? JSON.parse(view) : {view: 'home'}
+  return viewReducer(null, action)
+}
+
 export const AppContextProvider = (props) => {
   const {children} = props;
-  const defaultServices = [
-    {
-      id: 0,
-      title: 'title2',
-      imgurl: boxImg,
-    },
-    {
-      id: 1,
-      title: 'title1',
-      imgurl: longImg,
-    },
-    {
-      id: 2,
-      title: 'title3',
-      imgurl: contactImg,
-    },
-    {
-      id: 3,
-      title: 'title4',
-      imgurl: aboutImg,
-    }
-  ]
 
-  const [activeView, setActiveView] = useState(<Home />);
-  const [services, setServices] = useState(defaultServices);
-
-  const viewMappings = {
-    'home': <Home />,
-    'about': <About />,
-    'contact': <Contact />,
-    'offer': (title) => <Offers title={title} />,
-    'order': (offer) => <OrderOffer offer={offer} />
-  }
-
+  const [activeView, setActiveView] = useReducer(viewReducer, previousView());
+  
   const changeView = (view) => {
-    setActiveView(viewMappings[view])
+    setActiveView({view})
   }
 
   const openOffersView = (title) => {
-    setActiveView(viewMappings.offer(title))
+    setActiveView({view: 'offer', title})
   }
 
   const openOrderView = (offer) => {
-    setActiveView(viewMappings.order(offer))
+    setActiveView({view: 'order', offer})
   }
   
 
-  const mainContext = {activeView, services}
+  const mainContext = {activeView}
 
-  const updateMainContext = {changeView, openOffersView, openOrderView, setServices}
+  const updateMainContext = {changeView, openOffersView, openOrderView}
 
   return (
     <MainContext.Provider value={mainContext}>

@@ -4,8 +4,10 @@ import messengerIcon from '../../assets/icons/facebook.png';
 import twitterIcon from '../../assets/icons/twitter.png';
 import instagramIcon from '../../assets/icons/instagram.png'
 import styles from './Footer.module.css';
+import { useUpdateMainContext } from '../../contexts/MainContext';
 
 const Footer = () => {
+  const { changeView } = useUpdateMainContext()
   return (
     <footer className={`text-center bg-dark text-light p-5 ${styles.Footer}`}>
         <div>
@@ -18,6 +20,10 @@ const Footer = () => {
             <a href='https://whatsapp.com'><img src={messengerIcon} alt='connect with SinaArtz on whatsapp'/></a>
             <a href='https://whatsapp.com'><img src={twitterIcon} alt='connect with SinaArtz on whatsapp'/></a>
             <a href='https://whatsapp.com'><img src={instagramIcon} alt='connect with SinaArtz on whatsapp'/></a>
+        </div>
+        <div className={styles.ActionButtons}>
+          <p>Developed by:&nbsp;<a className='text-light' href='https://github.com/jerrywonder2126'>Jerry Wonder</a></p>
+          <button onClick={() => changeView('dashboard')}>For Moderators</button>
         </div>
     </footer>
   )

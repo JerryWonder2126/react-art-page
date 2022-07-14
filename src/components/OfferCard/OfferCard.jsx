@@ -9,7 +9,7 @@ const OfferCard = (props) => {
     <Card className={`${styles.OffersCard}`}>
         <div className={`${styles.OffersCardImageBox}`} style={{backgroundImage: `url(${props.offer.imgurl[0]})`}}></div>
         <Card.Body>
-            <Card.Title>{props.offer.title}</Card.Title>
+            <Card.Title as='h5'>{props.offer.title}</Card.Title>
             <Card.Text>{props.offer.short_description}</Card.Text>
             <Button onClick={() => openOrderView(props.offer)} variant='primary'>place order</Button>
         </Card.Body>

@@ -4,6 +4,7 @@ import OfferCard from '../OfferCard/OfferCard'
 import aboutImg from '../../assets/about.jpg'
 import contactImg from '../../assets/contact.jpg'
 import longImg from '../../assets/long.jpg'
+import styles from './LatestOffers.module.css'
 
 const LatestOffers = (props) => {
   let offers = [
@@ -71,12 +72,12 @@ const LatestOffers = (props) => {
 
   return (
     <>
-        <Row>
-            <Col className={`my-3`}>
-                <h2 className='text-center text-normal'>Check these out</h2>
+        <Row className={styles.FirstRow}>
+            <Col>
+                <h2 className='text-center'>Check these out</h2>
             </Col>
         </Row>
-        <Row className={`g-3`}>
+        <Row className={`${styles.SecondRow} g-3`}>
             {
                 offers.map(offer => (
                     <Col key={offer.uhash} xs={12} sm={6} md={4} lg={3}>

@@ -16,7 +16,7 @@ const NavComponent = () => {
   return (
     <Navbar bg="dark" expand="sm" variant="dark" expanded={expanded}>
       <Container className="py-3" fluid>
-        <Navbar.Brand href="/">SinaArtz</Navbar.Brand>
+        <Navbar.Brand href="#">SinaArtz</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : 'expanded')} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

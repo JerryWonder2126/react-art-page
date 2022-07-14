@@ -93,11 +93,11 @@ const Offers = (props) => {
   return (
     <Container className={styles.MainDiv} fluid>
         <Row>
-            <Col>
+            <Col className='my-3'>
                 <h1>Offers for {props.title}</h1>
             </Col>
         </Row>
-        <Row className={`g-3`}>
+        <Row className={`g-3 mb-5`}>
             {
                 offers.map(offer => (
                     <Col key={offer.uhash} xs={12} md={4} lg={3}>

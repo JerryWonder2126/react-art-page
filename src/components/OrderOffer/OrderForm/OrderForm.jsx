@@ -42,7 +42,9 @@ const OrderForm = () => {
         <Form.Label>Any other thing you'll like to tell us?</Form.Label>
         <Form.Control as='textarea' placeholder="..." value={form.message || ''} name='message' onChange={handleChange}/>
       </Form.Group>
-      <Button onClick={handleSubmit} type='submit'>Submit</Button>
+      <div className="d-flex justify-content-end mb-3">
+        <Button onClick={handleSubmit} type='submit'>Submit</Button>
+      </div>
     </Form>
   )
 }

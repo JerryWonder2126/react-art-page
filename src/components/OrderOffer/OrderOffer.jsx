@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Row, Col, Carousel, Nav } from 'react-bootstrap'
 import LatestOffers from '../LatestOffers/LatestOffers'
+import OrderDescription from './OrderDescription/OrderDescription'
 import OrderForm from './OrderForm/OrderForm'
 import styles from './OrderOffer.module.css'
 
@@ -10,7 +11,7 @@ const OrderOffer = (props) => {
     <>
     <Container className={`${styles.MainDiv} p-0 m-0`} fluid>
         <Row className='g-0'>
-            <Col xs={12} xl={6}>
+            <Col xs={12} lg={7}>
               <Carousel controls={false} fade>
                 {
                   props.offer.imgurl.map((url, index) => 
@@ -21,7 +22,7 @@ const OrderOffer = (props) => {
                 }
                 </Carousel>
             </Col>
-            <Col className='px-3'>
+            <Col>
               <Nav className={styles.NavTab} variant='tabs' fill justify>
                 <Nav.Item onClick={() => setFormVisible(false)}>
                   <Nav.Link as='h5' active={formVisible ? undefined : true} className={styles.NavLink}>Description</Nav.Link>
@@ -30,9 +31,11 @@ const OrderOffer = (props) => {
                   <Nav.Link as='h5' active={formVisible ? true : undefined} className={styles.NavLink}>Place Order</Nav.Link>
                 </Nav.Item>
               </Nav>
-              {
-                formVisible ? <OrderForm/> : 'Description'
-              }
+              <div className={styles.OrderDetails}>
+                {
+                  formVisible ? <OrderForm/> : <OrderDescription offer={props.offer} />
+                }
+              </div>
             </Col>
 
         </Row>

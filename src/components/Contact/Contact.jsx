@@ -9,12 +9,14 @@ const Contact = () => {
   return (
     <Container className={styles.SectionContainer} fluid>
       <Row className={`justify-content-center align-items-center ${styles.MainDiv}`}>
-        <Col xs={12} md={6} className={styles.SectionContainerCol}>
-          <h1>Contact SinaArtz</h1>
-          <div>
-            <h5>Reach out to us via <a href="tel:+2347057570146">call</a></h5>
-            <p>OR</p>
-            <a href='/messenger'>Messenger</a> <a href='whatsapp'>Whatsapp</a> <a href='mailto:jerrycul2001@gmail.com'>Mail</a>
+        <Col className='d-flex justify-content-center'>
+          <div className={styles.SectionContainerCol}>
+            <h1>Contact SinaArtz</h1>
+            <div>
+              <h5>Reach out to us via <a href="tel:+2347057570146">call</a></h5>
+              <p>OR</p>
+              <a href='/messenger'>Messenger</a> <a href='whatsapp'>Whatsapp</a> <a href='mailto:jerrycul2001@gmail.com'>Mail</a>
+            </div>
           </div>
         </Col>
       </Row>
