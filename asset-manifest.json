@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/react-art-page/static/css/main.9e32925a.css",
-    "main.js": "/react-art-page/static/js/main.690b627e.js",
+    "main.css": "/react-art-page/static/css/main.8c8259b1.css",
+    "main.js": "/react-art-page/static/js/main.c6384ebc.js",
     "static/js/787.c4e7f8f9.chunk.js": "/react-art-page/static/js/787.c4e7f8f9.chunk.js",
     "static/media/contact.jpg": "/react-art-page/static/media/contact.74bdbb1e6f5fe017f425.jpg",
     "static/media/about.jpg": "/react-art-page/static/media/about.63138f4a0edfa8c68ec4.jpg",
     "static/media/long.jpg": "/react-art-page/static/media/long.f079b55fa771286df033.jpg",
     "static/media/sample-box.png": "/react-art-page/static/media/sample-box.f079b55fa771286df033.png",
     "static/media/email.png": "/react-art-page/static/media/email.78ff8a2d0c98095bdf4c.png",
+    "static/media/art.svg": "/react-art-page/static/media/art.a6417cf3f55edc6d0577ea73c6bbfff4.svg",
     "static/media/instagram.png": "/react-art-page/static/media/instagram.75e0546a6b5abe4c0506.png",
     "static/media/whatsapp.png": "/react-art-page/static/media/whatsapp.23ba589a2c4926bd12c8.png",
     "index.html": "/react-art-page/index.html",
-    "main.9e32925a.css.map": "/react-art-page/static/css/main.9e32925a.css.map",
-    "main.690b627e.js.map": "/react-art-page/static/js/main.690b627e.js.map",
+    "main.8c8259b1.css.map": "/react-art-page/static/css/main.8c8259b1.css.map",
+    "main.c6384ebc.js.map": "/react-art-page/static/js/main.c6384ebc.js.map",
     "787.c4e7f8f9.chunk.js.map": "/react-art-page/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e32925a.css",
-    "static/js/main.690b627e.js"
+    "static/css/main.8c8259b1.css",
+    "static/js/main.c6384ebc.js"
   ]
 }
